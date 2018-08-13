@@ -1,0 +1,137 @@
+1517043112
+<html>
+    
+<head>
+        <title>微信商城后台</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../../static/public/css/sui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/public.css">
+        <script src="../../../static/public/js/jquery-3.2.1.min.js"></script>
+        <script src="../../../static/public/js/sui.min.js"></script>
+        <script src="../../../static/public/js/extend.js?time=1517043112"></script>
+</head>    <body>
+        <div class="sui-row-fluid">
+            <!-- header start -->
+                <div class="sui-navbar">
+                        <div class="navbar-inner">
+                          <div class="sui-container">
+                              <a href="#" class="sui-brand">
+                                <i class="sui-icon icon-tb-shop"></i>
+                                  微信商城后台
+                              </a>
+                          </div>
+                        </div>
+                </div>
+            <!-- header end -->
+        </div>
+
+        <div class="sui-row-fluid">
+
+            <div class="span2 white">
+                <ul class="sui-nav nav-list font-center font1-5">
+                    <li><a href="admin">首页</a></li>
+                    <li><a href="admin?tid=1">微信自定义菜单</a></li>
+                    <li><a href="admin?tid=2">添加商品</a></li>
+                </ul>
+            </div>
+
+            <div class="span10 white">
+                <div id="content">
+                    
+<form method="post" id="form-msg" class="sui-form form-horizontal sui-validate" novalidate="novalidate">
+    <div class="control-group">
+        <div class="controls">
+            <button id="addButton" type="button" class="sui-btn btn-large">添加菜单</button>
+        </div>
+    </div>
+    <hr/>
+    <table id="addMenu">
+
+    </table>
+
+    <div class="control-group">
+        <label  class="control-label"></label>
+        <label  class="control-label"></label>
+        <div class="controls">
+            <button data-action="createMenu" type="submit" class="sui-btn btn-primary mySubmit">创建菜单</button>
+        </div>
+        <label  class="control-label"></label>
+        <label  class="control-label"></label>
+        <label  class="control-label"></label>
+        <label  class="control-label"></label>
+        <div class="controls">
+            <button data-action="deleteMenu" type="submit" class="sui-btn btn-primary mySubmit">删除菜单</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    var data =
+    {
+        'menu':
+        {
+            'button':[
+                {
+                    'name':'',
+                    "sub_button": [ ]
+                }
+            ]
+        }
+    };
+    //绑定按钮事件来创建
+    $('#addButton').click(function(){
+        $('#addMenu').addMenu('addMenu',data);
+    });
+    //获取动态数据
+    $(function () {
+        $.ajax({
+            url:"getData",
+            async:true,
+            dataType:'json',
+            error:function(xhr,err){
+                console.log('ajax失败！');
+                console.log(xhr);
+                console.log(err);
+            },
+            success:function(data){
+                console.log('ajax成功！');
+                console.log(data);
+
+                if(data.menu){
+                    $('#addMenu').addMenu('addMenu',data);
+                }
+            }
+        });
+    });
+    //绑定form表单的action方法
+    $('.mySubmit').click(function(){
+        $('#form-msg').attr('action',$(this).data('action'));
+    });
+
+</script>                </div>
+            </div>
+        </div>
+
+        
+<div class="sui-row-fluid font-center font1 white" style="height:5em;line-height:5em;margin-top: 0.5em;">
+            <span>Design By：DMF</span> |
+            <span>关于我</span>
+</div>
+
+<!-- Modal-->
+<div id="myModal" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+                <h4 id="myModalLabel" class="modal-title">消息提示</h4>
+            </div>
+            <div class="modal-body">添加超过限制，创建失败</div>
+            <div class="modal-footer">
+                <button type="button" data-ok="modal" class="sui-btn btn-primary btn-large">ok</button>
+                <button type="button" data-dismiss="modal" class="sui-btn btn-default btn-large">dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>    </body>
+</html>

@@ -1,0 +1,194 @@
+<!--引入CSS-->
+<link rel="stylesheet" type="text/css" href="../../../static/public/webuploader/css/webuploader.css">
+<link rel="stylesheet" type="text/css" href="../../../static/image-upload/style.css" />
+<!--引入JS-->
+<script type="text/javascript" src="../../../static/public/webuploader/dist/webuploader.js"></script>
+<style>
+    #goods-form {padding: 1.5em;}
+    .tr-form {padding: 0.2em;}
+    .tr-form span {width: 16em;}
+</style>
+
+<form id="goods-form" name="goodForm" action="addGoods" class="sui-form form-horizontal" novalidate="novalidate">
+    <div class="control-group tr-form">
+        <span>商品名：</span>
+        <div class="controls">
+            <input type="text" name="name" placeholder="商品名" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>商品价格：</span>
+        <div class="controls">
+            <input type="text" name="price" placeholder="商品价格" class="input-xlarge">
+        </div>
+    </div>
+        商品图片：
+        <div id="wrapper">
+            <div id="container">
+                <!--头部，相册选择和格式选择-->
+
+                <div id="uploader">
+                    <div class="queueList">
+                        <div id="dndArea" class="placeholder">
+                            <div id="filePicker"></div>
+                            <p>或将照片拖到这里，单次最多可选300张</p>
+                        </div>
+                    </div>
+                    <div class="statusBar" style="display:none;">
+                        <div class="progress">
+                            <span class="text">0%</span>
+                            <span class="percentage"></span>
+                        </div><div class="info"></div>
+                        <div class="btns">
+                            <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="control-group tr-form">
+        <span>净重：</span>
+        <div class="controls">
+            <input type="text" name="netWeight" placeholder="商品净重" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>包装：</span>
+        <div class="controls">
+            <input type="text" name="packaging" placeholder="商品包装" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>单果重量：</span>
+        <div class="controls">
+            <input type="text" name="singleFruitWeight" placeholder="单果重量" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>商标：</span>
+        <div class="controls">
+            <input type="text" name="brand" placeholder="商品商标" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>产地：</span>
+        <div class="controls">
+            <input type="text" name="madeIn" placeholder="商品产地" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>种类：</span>
+        <div class="controls">
+            <input type="text" name="fruitType" placeholder="商品种类" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>厂家名：</span>
+        <div class="controls">
+            <input type="text" name="factoryName" placeholder="厂家名" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>厂家地址：</span>
+        <div class="controls">
+            <input type="text" name="factoryAddr" placeholder="厂家地址" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>厂家联系方式：</span>
+        <div class="controls">
+            <input type="text" name="factoryPhone" placeholder="联系方式" class="input-xlarge">
+        </div>
+    </div>
+    <div class="control-group tr-form">
+        <span>保质期：</span>
+        <div class="controls">
+            <input type="text" name="qualityGuaranteePeriod" placeholder="保质期" class="input-xlarge">
+        </div>
+    </div>
+    <input type="hidden" name="post" value="1">
+    <a href="javascript:document.goodForm.submit();" class="sui-btn btn-xlarge btn-info">提交</a>
+</form>
+<script>
+    $("#goods-form").validate({
+        rules: {
+            name:{
+                required:true,
+                minlength: 1,
+                maxlength: 20
+            },
+            price:{
+                required:true
+            },
+            netWeight:{
+                required:true,
+            },
+            packaging:{
+                required:true,
+                minlength: 1,
+                maxlength: 10
+            },
+            singleFruitWeight:{
+                required:true,
+                minlength: 1,
+                maxlength: 10
+            },
+            brand:{
+                required:true,
+                minlength: 1,
+                maxlength: 10
+            },
+            madeIn:{
+                required:true,
+                minlength: 1,
+                maxlength: 10
+            },
+            fruitType:{
+                required:true,
+                minlength: 1,
+                maxlength: 10
+            },
+            factoryName:{
+                required:true,
+                minlength: 1,
+                maxlength: 25
+            },
+            factoryAddr:{
+                required:true,
+                minlength: 1,
+                maxlength: 25
+            },
+            factoryPhone:{
+                required:true,
+                minlength: 11,
+                maxlength: 11
+            },
+            qualityGuaranteePeriod:{
+                required:true,
+                minlength: 1,
+                maxlength: 10
+            }
+        },
+        messages: {
+            name: ["亲，商品名不能为空哟","亲，商品名不能超过20个字"],
+            price:["亲，商品价格不能为空哟"],
+            netWeight:["亲，商品的净重量不能为空哟"],
+            packaging:["亲，包装方式不能为空哟","亲，长度不能超过10个字哟"],
+            singleFruitWeight:["亲，单果重量必填哟","亲，长度不能超过10个字哟"],
+            brand:["亲，商标必填哟","亲，长度不能超过10个字哟"],
+            madeIn:["亲，产地必填哟","亲，长度不能超过10个字哟"],
+            fruitType:["亲，水果种类必填哟","亲，长度不能超过10个字哟"],
+            factoryName:["亲，厂家名必填哟","亲，长度不能超过25个字哟"],
+            factoryAddr:["亲，厂家地址必填哟","亲，长度不能超过25个字哟"],
+            factoryPhone:["亲，厂家电话必填哟","亲，长度只能11个字哟"],
+            qualityGuaranteePeriod:["亲，保质期必填哟","亲，长度不能超过10个字哟"]
+        },
+        success: function() {
+            $.alert("恭喜，没有问题了。");
+            return false;
+        }
+    });
+
+</script>
+
+<script src="../../../static/image-upload/upload.js"></script>
