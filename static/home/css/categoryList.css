@@ -1,0 +1,12 @@
+html,body{margin: 0;padding: 0;background-color: rgba(217, 217, 217, 0.11);}
+ul{list-style: none;}
+.d-tags{text-align: center;}
+.triangle-up{position:absolute;width: 0px;height: 0px;margin-bottom: 6em; border:6px solid transparent;  border-bottom-color:#0f0f0f;}
+.triangle-down{position:absolute;width: 0px;height: 0px;margin-bottom: 6em; border:6px solid transparent;  border-top-color:#0f0f0f;}
+
+.d-lists{display: flex;}
+.d-lists img{width: 6em;height: 8em;flex: 1;}
+.d-lists div{flex: 3;margin: 0.5em;}
+.d-lists-num{margin: 1em 0;display: block;color: #b1b1b1;}
+.d-lists-money{color:red;font-size: 1.2em;}
+.d-lists-other{padding:0 0.2em;color: #b1b1b1;}

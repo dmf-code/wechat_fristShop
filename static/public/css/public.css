@@ -1,0 +1,30 @@
+/* 文字居中 */
+.font-center{
+    text-align:center;
+    margin:0 auto;
+}
+
+/* 文字大小 */
+.font3{
+    font-size: 3em;
+}
+.font2{
+    font-size: 2em;
+}
+.font1-5{
+    font-size: 1.5em;
+}
+.font1{
+    font-size: 1em;
+}
+.font0-5{
+    font-size: 0.5em;
+}
+
+body{
+    background-color: #b1b1b1;
+}
+
+.white{
+    background-color: #ffffff;
+}

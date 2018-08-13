@@ -1,0 +1,55 @@
+html {-ms-overflow-style:none;overflow:-moz-scrollbars-none;}
+::-webkit-scrollbar{width:0px}
+html,body{height: 100%;}
+img {background-size: 100% 100%;width: 100%;height:100%;}
+li, ol, ul {list-style: none;}
+.area{width: 100%;height: 3em;text-align:center;}
+.mydiv{padding: 0.25em;  height:8em;}
+.p-text{text-align: center;}
+#good{margin-bottom: 5em;}
+
+#tab2{background-color: #d8d8d8;}
+.detail-header{margin: 10px 0;padding: 10px 0;background-color: #ffffff;}
+.detail-title{text-align: center;font-size: 34px;color: #3cc51f;font-weight: 400;margin: 0 15%;}
+.detail-p{margin-top: 10px;height: 48px;line-height: 48px;background: #fff;color: #051B28;overflow: hidden;font-size: 16px;font-weight: 400;}
+.detail-ul{padding: 12px;}
+.detail-ul li{}
+.detail-ul li img{background-size: 100% 100%;}
+
+.swiper-container{width:100%;height:18em;}
+.swiper-container .swiper-wrapper .swiper-slide img{width: inherit;height: inherit;}
+.icon-text {background-color: #fb6878;color: #FFF;font-size: 12px;padding: 1px 2px;}
+.ui-yen .price-symbol {font-family: arial;font-style: normal;font-size: 18px;position: relative;top: 2px;}
+.ui-yen .price {font-size: 24px;position: relative;top: 2px;margin-right: 5px;}
+.postage{background-color: #FFF;line-height: 30px;padding: 0 10px;font-size: 12px;color: #999;font-weight: lighter;}
+.sales{background-color: #FFF;line-height: 30px;padding: 0 10px;font-size: 12px;color: #999;font-weight: lighter;}
+
+.tags-ul {list-style-type: none;padding: 0;margin: 10px 0;overflow: hidden;}
+.tags-ul li {float: left;background-color: #FEE;color: #666;margin: 6px 3px;padding: 6px 9px;text-align: center;border-radius: 10px;-moz-border-radius: 10px;font-size: 12px;}
+.tags-comments {margin: 6px;}
+.tags-user {line-height: 16px;font-size: 12px;margin: 10px 0;position: relative;}
+.tags-img {width: 24px;height: 24px;border-radius: 20px;-moz-border-radius: 20px;}
+.tags-name {vertical-align: middle;padding: 5px;line-height: 22px;color: #998;}
+.tags-content {font-size: 13px;line-height: 16px;text-align: justify;}
+.tags-date {font-size: 10px;padding-top: 8px;color: #999;line-height: 14px;}
+.tags-more {text-align: center;display: block;}
+.tags-more button {width: 107px;height: 27px;margin: 15px auto;border: 1px solid #ccc;color: #666;background: #fff;border-radius: 4px;-moz-border-radius: 4px;line-height: 27px;-webkit-appearance: none;text-align: center;}
+
+.content-padded{padding: 15px;}
+.container{background: #f5f5f5;}
+.review-content {color: #051b28;font: .12rem/1.5 helvetica;background-color: #FFF;}
+.review-content ul.filter {list-style: none;overflow: hidden;padding: 1.2em 0 .4em;margin: 0 10px;border-bottom: 1px solid #e5e5e5;}
+.review-content ul.filter li.current {background-color: #FF0036;color: #FFF;}
+.review-content ul.filter li {padding: 2.5% 4.5%;margin: 0 2.3% 3.5% 0;float: left;border-radius: 10px;background-color: #F5F5F5;color: #666;}
+.review-content ul.filter li.tag-product {background-color: #FEE;color: #666;}
+.review-content ul.filter li {padding: 2.5% 4.5%;margin: 0 2.3% 3.5% 0;float: left;border-radius: 10px;background-color: #F5F5F5;color: #666;}
+.review-content ul.list .item {border-bottom: 1px solid #e5e5e5;padding: 20px 0;margin: 0 10px;}
+.review-content ul.list .item .info {overflow: hidden;margin-bottom: .8em;color: #999;margin-top: 5px;}
+.review-content ul.list .item .info .author {float: left;}
+.review-content ul.list .item .info {overflow: hidden;margin-bottom: .8em;color: #999;margin-top: 5px;}
+.review-content ul.list .item .info time {float: right;}
+.review-content ul.list .item blockquote {margin: 0;padding: 0;font-size: 14px;word-wrap: break-word;}
+.review-content ul.list .item .reply {position: relative;margin-top: 5px;background-color: #f0f0f0;padding: 8px;font-size: 13px;border-radius: 5px;}
+.review-content ul.list .item ul.pics {overflow: hidden;margin-top: 5px;list-style: none;padding: 0;}
+.review-content ul.list .item ul.pics li {width: 55px;height: 55px;float: left;margin: 0 .48em .5em 0;background-color: #fff;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: center;display: -ms-flexbox;-ms-flex-pack: center;-ms-flex-align: center;}
+.review-content ul.list .item ul.pics li img {max-width: 100%;max-height: 100%;vertical-align: top;}
