@@ -1,0 +1,24 @@
+2018-03-11 23:41:46 Unknown error type: [1] Call to undefined method stdClass::display()<br />
+  Fatal error on line 29 in file D:\WWW\fruitShop\core\controller.php, PHP 5.6.1 (WINNT)<br />
+2018-03-11 23:43:59 Unknown error type: [1] Call to undefined method stdClass::display()<br />
+  Fatal error on line 29 in file D:\WWW\fruitShop\core\controller.php, PHP 5.6.1 (WINNT)<br />
+2018-03-11 23:44:02 Unknown error type: [1] Call to undefined method stdClass::display()<br />
+  Fatal error on line 29 in file D:\WWW\fruitShop\core\controller.php, PHP 5.6.1 (WINNT)<br />
+2018-03-11 23:44:07 Unknown error type: [1] Call to undefined method stdClass::display()<br />
+  Fatal error on line 29 in file D:\WWW\fruitShop\core\controller.php, PHP 5.6.1 (WINNT)<br />
+2018-03-11 23:45:43 Unknown error type: [1] Call to undefined method stdClass::display()<br />
+  Fatal error on line 29 in file D:\WWW\fruitShop\core\controller.php, PHP 5.6.1 (WINNT)<br />
+2018-03-11 23:47:08 Unknown error type: [2] mkdir(): File exists<br />
+  Fatal error on line 32 in file D:\WWW\fruitShop\core\cache.php, PHP 5.6.1 (WINNT)<br />
+2018-06-03 23:26:23 Unknown error type: [8] Undefined index: userid<br />
+  Fatal error on line 18 in file D:\WWW\fruitShop\core\dinfos.php, PHP 5.6.1 (WINNT)<br />
+2018-06-03 23:26:23 Unknown error type: [1] Uncaught exception 'Exception' with message '不存在D:\WWW\fruitShop/index/controller/index.php类文件。' in D:\WWW\fruitShop\core\loader.php:22
+Stack trace:
+#0 [internal function]: core\loader::autoload('index\\controlle...')
+#1 [internal function]: spl_autoload_call('index\\controlle...')
+#2 D:\WWW\fruitShop\core\dphp.php(56): class_exists('index\\controlle...')
+#3 D:\WWW\fruitShop\core\dphp.php(34): core\dphp::exec()
+#4 D:\WWW\fruitShop\index.php(27): core\dphp::run()
+#5 {main}
+  thrown<br />
+  Fatal error on line 22 in file D:\WWW\fruitShop\core\loader.php, PHP 5.6.1 (WINNT)<br />
