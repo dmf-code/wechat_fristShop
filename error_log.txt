@@ -1,0 +1,15 @@
+2018-09-03 00:08:30 Unknown error type: [8] Undefined index: code<br />
+  Fatal error on line 69 in file C:\Users\DMF\Desktop\fruitShop\core\controller.php, PHP 7.2.1 (WINNT)<br />
+2018-09-03 00:16:51 Unknown error type: [8] Undefined index: code<br />
+  Fatal error on line 69 in file C:\Users\DMF\Desktop\fruitShop\core\controller.php, PHP 7.2.1 (WINNT)<br />
+2018-09-03 00:18:01 Unknown error type: [8] Undefined index: code<br />
+  Fatal error on line 69 in file C:\Users\DMF\Desktop\fruitShop\core\controller.php, PHP 7.2.1 (WINNT)<br />
+2018-09-03 00:18:43 Unknown error type: [1] Uncaught ReflectionException: Method home\controller\index::fruitShop() does not exist in C:\Users\DMF\Desktop\fruitShop\core\route.php:25
+Stack trace:
+#0 C:\Users\DMF\Desktop\fruitShop\core\route.php(25): ReflectionMethod->__construct(Object(home\controller\index), 'fruitShop')
+#1 C:\Users\DMF\Desktop\fruitShop\core\route.php(16): core\route::invoke('fruitShop', 'home\\controller...')
+#2 C:\Users\DMF\Desktop\fruitShop\core\dphp.php(37): core\route::check()
+#3 C:\Users\DMF\Desktop\fruitShop\index.php(27): core\dphp::run()
+#4 {main}
+  thrown<br />
+  Fatal error on line 25 in file C:\Users\DMF\Desktop\fruitShop\core\route.php, PHP 7.2.1 (WINNT)<br />

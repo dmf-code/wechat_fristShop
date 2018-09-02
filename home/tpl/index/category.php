@@ -33,9 +33,9 @@ require_once ROOT_PATH . '/home/tpl/public/header.php';
                 echo '<div class="weui-flex">';
                 ?>
                         <div class="weui-flex__item">
-                            <a href="/fruitShop/index.php/home/categoryList/index?id=<?php echo $v['categoryid']; ?>">
+                            <a href="/home/categoryList/index?id=<?php echo $v['categoryid']; ?>">
                                 <div class="placeholder mydiv">
-                                    <img src="http://wx.dmf95.cn/<?php echo $v['img']; ?>" alt="<?php echo $v['name']; ?>">
+                                    <img src="<?php echo $v['img']; ?>" alt="<?php echo $v['name']; ?>">
                                 </div>
                                 <p class="p-text"><?php echo $v['name']; ?></p>
                             </a>

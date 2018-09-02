@@ -33,8 +33,8 @@
             foreach($carouseList as $k=>$v) {
                 ?>
                 <div class="swiper-slide">
-                    <a href="http://wx.dmf95.cn/fruitShop/index.php/home/detail/total?id=<?php echo $v['detailid'];?>">
-                    <img style="width: 100%;height: 100%;" src="http://wx.dmf95.cn/<?php echo $v['imgs'];?>" alt="">
+                    <a href="/home/detail/total?id=<?php echo $v['detailid'];?>">
+                    <img style="width: 100%;height: 100%;" src="<?php echo $v['imgs'];?>" alt="">
                     </a>
                 </div>
                 <?php
@@ -60,7 +60,7 @@
                         <div class="weui-flex">
 
                             <div class="weui-flex__item">
-                                <a href="/fruitShop/index.php/home/detail/total?id=<?php echo $v['goods'][$i]['id'];?>">
+                                <a href="/home/detail/total?id=<?php echo $v['goods'][$i]['id'];?>">
                                     <div class="placeholder mydiv">
                                         <img src="<?php echo explode(',',$v['goods'][$i]['imgUrl'])[0];?>" alt="">
                                     </div>
@@ -72,7 +72,7 @@
                             if($size>=$i+2) {
                                 ?>
                                 <div class="weui-flex__item">
-                                    <a href="/fruitShop/index.php/home/detail/total?id=<?php echo $v['goods'][$i+1]['id']; ?>">
+                                    <a href="/home/detail/total?id=<?php echo $v['goods'][$i+1]['id']; ?>">
                                         <div class="placeholder mydiv">
                                             <img src="<?php echo explode(',',$v['goods'][$i+1]['imgUrl'])[0]; ?>"
                                                  alt="">
