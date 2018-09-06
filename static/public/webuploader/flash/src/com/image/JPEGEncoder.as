@@ -246,7 +246,7 @@ package com.image
 			}
 		}
 		
-		// DCT & quantization core
+		// DCT & quantization Core
 		
 		private function fDCTQuant(data:Vector.<Number>, fdtbl:Vector.<Number>):Vector.<int>
 		{

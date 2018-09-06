@@ -5,7 +5,7 @@
  * Date: 2018/2/3
  * Time: 21:36
  */
-require_once ROOT_PATH . "/admin/tpl/public/header.php";
+require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
     global $dcache;
     $homeCarousel = $dcache->getVal('homeCarousel')[0];
 
@@ -78,5 +78,5 @@ require_once ROOT_PATH . "/admin/tpl/public/header.php";
 <script src="../../../static/image-upload/upload.js"></script>
 
 <?php
-require_once ROOT_PATH . "/admin/tpl/public/footer.php";
+require_once ROOT_PATH . "/admin/Tpl/Public/footer.php";
 ?>

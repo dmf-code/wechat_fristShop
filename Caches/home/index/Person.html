@@ -1,0 +1,147 @@
+
+<head>
+        <title>微信水果商城</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../../../static/public/css/weui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/jquery-weui.css">
+
+        <script src="../../../static/public/js/jquery-2.1.4.js"></script>
+</head><link rel="stylesheet" href="../../../static/home/css/home.css">
+
+<div class="weui-cells">
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <img style="height: 4em;width: 4em;border-radius:100%;" src="http://wx.qlogo.cn/mmopen/vi_32/geERgu7eveXJygcDxAnwiaKT1aoQ6ibppU8CXAtogtlAm4zUylkxhW5rCw90zIveOCwX7Thricnib05ajSmV2YrWIQ/0">
+        </div>
+        <div class="weui-cell__bd" style="text-align: center;">
+            <p>用户名：测试</p>
+            <p>会员：黄金会员</p>
+            <p>积分：0</p>
+        </div>
+    </div>
+</div>
+<div class="weui-cells__title">我的订单
+    <span style="float: right;">查看全部&gt;</span>
+</div>
+<div class="weui-cells">
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <a href="/order/order/pendingPayment">
+                        <div class="area">
+                            <span class='weui-badge' style='position: absolute;'>5</span>                            <img src="../../../Static/public/imgs/if_2_-_Cash_Register_2102044.svg" alt="">
+                        </div>
+
+                        <p class="weui-tabbar__label">待付款</p>
+                    </a>
+                </div>
+                <div class="weui-flex__item">
+                    <a href="/order/order/pendingDelivery">
+                        <div class="area">
+                            <span class='weui-badge' style='position: absolute;'>1</span>                            <img src="../../../Static/public/imgs/if_3_-_Shop_2102064.svg" alt="">
+                        </div>
+                        <p class="weui-tabbar__label">待发货</p>
+                    </a>
+                </div>
+                <div class="weui-flex__item">
+                    <a href="/order/order/pendingDelivery2">
+                        <div class="area">
+                                                        <img src="../../../Static/public/imgs/if_23_-_Truck_2102059.svg" alt="">
+                        </div>
+                        <p class="weui-tabbar__label">待收货</p>
+                    </a>
+                </div>
+                <div class="weui-flex__item">
+                    <a href="/order/order/toBeEvaluated">
+                        <div class="area">
+                                                        <img src="../../../Static/public/imgs/if_24_-_Comment_2102060.svg" alt="">
+                        </div>
+                        <p class="weui-tabbar__label">待评价</p>
+                    </a>
+                </div>
+                <div class="weui-flex__item">
+                    <a href="#">
+                        <div class="area">
+                            <img src="../../../Static/public/imgs/if_1_-_Customer_Service_2102045.svg" alt="">
+                        </div>
+                        <p class="weui-tabbar__label">退款/售后</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="weui-cells__title">个人信息</div>
+<div>
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="/home/address/showAddress" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="../../../static/public/imgs/address.jpg">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">收货地址</h4>
+                            <p class="weui-media-box__desc">收货地址管理</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="weui-cells__title">热门活动</div>
+<div>
+    <div class="weui-cell">
+        <div class="weui-cell__bd">
+            <div class="weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="/order/buyNow/index" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class="weui-media-box__thumb" src="../../../static/public/imgs/buynow.jpg">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">水果秒杀</h4>
+                            <p class="weui-media-box__desc">想要便宜的水果吗？赶快行动起来吧！动动手指，一起来秒杀吧！</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="margin-bottom: 5.5em;height: 1em;"></div>
+
+
+<!--                底部tabbar-->
+<div class="weui-tabbar" style="position: fixed;">
+    <a href="home" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+            <img src="../../../Static/public/imgs/if_Home_2202277.svg" alt="">
+        </div>
+        <p class="weui-tabbar__label">首页</p>
+    </a>
+    <a href="category" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+            <img src="../../../Static/public/imgs/if_Document_2202270.svg" alt="">
+        </div>
+        <p class="weui-tabbar__label">分类</p>
+    </a>
+    <a href="person" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+            <img src="../../../Static/public/imgs/if_Account_2202250.svg" alt="">
+        </div>
+        <p class="weui-tabbar__label">我的</p>
+    </a>
+</div>
+

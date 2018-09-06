@@ -6,19 +6,22 @@
  * Time: 0:03
  */
 
-namespace comment\controller;
+namespace Comment\Controller;
 
 
-class comment extends \core\controller
+use Rice\Core\Controller;
+use Rice\Core\Core;
+
+class Comment extends Controller
 {
     /*
      * 商品评论信息
      */
     public function goodComment(){
-        global $dinfos;
+
         $goodid = $this->getRequest('goodid');
 
-        $comment = \core\dphp::instance('\comment\model\comment');
+        $comment = Core::instance('\Comment\Model\Comment');
         $commentData = $comment->getComment($goodid);
 
         echo json_encode($commentData);
@@ -28,7 +31,7 @@ class comment extends \core\controller
      */
     public function goodComments(){
         $goodid = $this->getRequest('goodid');
-        $comment = \core\dphp::instance('\comment\model\comment');
+        $comment = Core::instance('\Comment\Model\Comment');
         $commentData = $comment->getComments($goodid);
 
         echo json_encode($commentData);

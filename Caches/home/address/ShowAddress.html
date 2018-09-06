@@ -1,0 +1,241 @@
+
+<head>
+        <title>微信水果商城</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../../../static/public/css/weui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/jquery-weui.css">
+
+        <script src="../../../static/public/js/jquery-2.1.4.js"></script>
+</head>    <style>
+        .bar-nav {
+            top: 0;
+        }
+        .bar {
+
+            right: 0;
+            left: 0;
+            z-index: 10;
+            height: 2.2rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            background-color: #f7f7f8;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .bar .button-nav.pull-left {
+            margin-left: -0.25rem;
+        }
+        .bar .button.pull-left {
+            margin-right: 0.5rem;
+        }
+        .bar .button-link {
+            top: 0;
+            padding: 0;
+            font-size: 0.8rem;
+            line-height: 2.2rem;
+            height: 2.2rem;
+            color: #0894ec;
+            border: 0;
+        }
+        .bar .button {
+            position: relative;
+            z-index: 20;
+            margin-top: 0;
+            font-weight: 400;
+        }
+        .button {
+            border: 1px solid #0894ec;
+            color: #0894ec;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            border-radius: 0.25rem;
+            line-height: 1.25rem;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            background: none;
+            padding: 0 0.5rem;
+            margin: 0;
+            height: 1.35rem;
+            white-space: nowrap;
+            position: relative;
+            text-overflow: ellipsis;
+            font-size: 0.7rem;
+            font-family: inherit;
+            cursor: pointer;
+        }
+        .pull-left {
+            float: left;
+        }
+        .bar .button .icon {
+            padding: 0;
+        }
+        .bar .icon {
+            position: relative;
+            z-index: 20;
+            padding: .5rem .1rem;
+            font-size: 1rem;
+            line-height: 1.2rem;
+        }
+        .icon {
+            font-family: "iconfont-sm" !important;
+            font-style: normal;
+            display: inline-block;
+            vertical-align: middle;
+            background-size: 100% auto;
+            background-position: center;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back" href="/home/index/person">
+            <返回
+        </a>
+        <h1 class="title" style="text-align: center;">收货地址</h1>
+    </header>
+
+
+        <form id="form0" method="post" style="margin: 0.5em;padding: 0.5em;">
+            <input type="hidden" name="addressid" value="6">
+            <input type="hidden" name="name" value="全球">
+            <input type="hidden" name="mobile" value="18312772931">
+            <input type="hidden" name="address" value="北京 西城区 ">
+            <input type="hidden" name="zipCode" value="111111">
+            <input type="hidden" name="detailAddress" value="2222222">
+            <input type="hidden" name="post" value="2">
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="weui-cells weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" data-id="form0" for="s00">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" name="checkbox1" class="weui-check" id="s00" checked=checked>
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                            <div class="weui-cell__bd">
+                                <p>默认地址</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <p><span style="float: left;">全球</span><span style="float: right;">18312772931</span></p>
+                    <div style="clear: both;"></div>
+                    <p>北京-西城区--2222222</p>
+                </div>
+            </div>
+
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="weui-cells">
+                        <a data-id="form0" class="edit weui-btn btn_mini  weui-btn_plain-default">编辑</a>
+                    </div>
+                </div>
+                <div style="width: 2em;"></div>
+                <div class="weui-flex__item">
+                    <div class="weui-cells">
+                        <a href="delAddress?addressid=6" class="weui-btn btn_mini  weui-btn_plain-default">删除</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        
+        <form id="form1" method="post" style="margin: 0.5em;padding: 0.5em;">
+            <input type="hidden" name="addressid" value="8">
+            <input type="hidden" name="name" value="a">
+            <input type="hidden" name="mobile" value="13111111111">
+            <input type="hidden" name="address" value="北京 东城区 ">
+            <input type="hidden" name="zipCode" value="111111">
+            <input type="hidden" name="detailAddress" value="1111111">
+            <input type="hidden" name="post" value="2">
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="weui-cells weui-cells_checkbox">
+                        <label class="weui-cell weui-check__label" data-id="form1" for="s11">
+                            <div class="weui-cell__hd">
+                                <input type="checkbox" name="checkbox1" class="weui-check" id="s11" >
+                                <i class="weui-icon-checked"></i>
+                            </div>
+                            <div class="weui-cell__bd">
+                                <p>默认地址</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <p><span style="float: left;">a</span><span style="float: right;">13111111111</span></p>
+                    <div style="clear: both;"></div>
+                    <p>北京-东城区--1111111</p>
+                </div>
+            </div>
+
+            <div class="weui-flex">
+                <div class="weui-flex__item">
+                    <div class="weui-cells">
+                        <a data-id="form1" class="edit weui-btn btn_mini  weui-btn_plain-default">编辑</a>
+                    </div>
+                </div>
+                <div style="width: 2em;"></div>
+                <div class="weui-flex__item">
+                    <div class="weui-cells">
+                        <a href="delAddress?addressid=8" class="weui-btn btn_mini  weui-btn_plain-default">删除</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        
+<div style="margin: 4em 0;"></div>
+
+
+<div class="weui-footer_fixed-bottom" style="margin: 0;padding: 0;">
+    <div class="weui-tabbar__item">
+        <a href="/home/address/createAddress" class="weui-btn weui-btn_warn">新增收货地址</a>
+    </div>
+</div>
+
+
+<!--<div class="weui-footer weui-footer_fixed-bottom">-->
+<!--    <p class="weui-footer__text">-->
+<!--        <span>Design By：DMF</span> |-->
+<!--        <span>关于我</span>-->
+<!--    </p>-->
+<!--</div>-->
+
+<script src="../../../static/public/js/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+
+<script src="../../../static/public/js/jquery-weui.js"></script>
+<script type='text/javascript' src='../../../static/public/js/swiper.js' charset='utf-8'></script><script>
+    $(function () {
+        $('a.edit').click(function () {
+            var id = $(this).data('id');
+            $('#'+id).attr('action','createAddress');
+            $('#'+id).submit();
+        });
+        $('label.weui-check__label').click(function () {
+            $('input.weui-check').removeAttr('checked');
+            var id = $(this).data('id');
+            $('#'+id).attr('action','updateDefault');
+            $('#'+id).submit();
+        });
+    });
+</script>

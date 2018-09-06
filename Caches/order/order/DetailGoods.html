@@ -1,0 +1,247 @@
+
+<head>
+        <title>微信水果商城</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../../../static/public/css/weui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/jquery-weui.css">
+        <style>
+                html,body{
+                        background-color: #cec4ba;
+                }
+                 .bar-nav {
+                         top: 0;
+                 }
+                .bar {
+
+                        right: 0;
+                        left: 0;
+                        z-index: 10;
+                        height: 2.2rem;
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+                        background-color: #f7f7f8;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                }
+                .bar .button-nav.pull-left {
+                        margin-left: -0.25rem;
+                }
+                .bar .button.pull-left {
+                        margin-right: 0.5rem;
+                }
+                .bar .button-link {
+                        top: 0;
+                        padding: 0;
+                        font-size: 0.8rem;
+                        line-height: 2.2rem;
+                        height: 2.2rem;
+                        color: #0894ec;
+                        border: 0;
+                }
+                .bar .button {
+                        position: relative;
+                        z-index: 20;
+                        margin-top: 0;
+                        font-weight: 400;
+                }
+                .button {
+                        border: 1px solid #0894ec;
+                        color: #0894ec;
+                        text-decoration: none;
+                        text-align: center;
+                        display: block;
+                        border-radius: 0.25rem;
+                        line-height: 1.25rem;
+                        box-sizing: border-box;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -ms-appearance: none;
+                        appearance: none;
+                        background: none;
+                        padding: 0 0.5rem;
+                        margin: 0;
+                        height: 1.35rem;
+                        white-space: nowrap;
+                        position: relative;
+                        text-overflow: ellipsis;
+                        font-size: 0.7rem;
+                        font-family: inherit;
+                        cursor: pointer;
+                }
+                .pull-left {
+                        float: left;
+                }
+
+                .bar .button .icon {
+                        padding: 0;
+                }
+                .bar .icon {
+                        position: relative;
+                        z-index: 20;
+                        padding: .5rem .1rem;
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                }
+                .icon {
+                        font-family: "iconfont-sm" !important;
+                        font-style: normal;
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-size: 100% auto;
+                        background-position: center;
+                        -webkit-font-smoothing: antialiased;
+                        -webkit-text-stroke-width: 0.2px;
+                        -moz-osx-font-smoothing: grayscale;
+                }
+        </style>
+        <script src="../../../static/public/js/jquery-3.2.1.min.js"></script>
+</head>
+<header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back" href="/home/index/person">
+                &lt;返回
+        </a>
+
+        <h1 class="title" style="text-align: center;"></h1>
+</header><form id="myForm" action="addDetailGoods" method="post">
+    <input type="hidden" name="goodid" value="46">
+    <input type="hidden" name="price" value="1.00">
+    <input type="hidden" name="addressid" value="6">
+    <div class="weui-tab">
+    <div class="weui-tabbar__item">
+
+        <div class="weui-cells">
+            <div class="weui-cell" style="color: #000000;">
+                收货地址
+            </div>
+            <div href="javascript:void(0);" class="weui-cell">
+                <div style="width: 100%;">
+                    <p>
+                        <span style="float: left;">收货人名字：全球</span>
+                        <span style="float: right;">电话：18312772931</span>
+                    </p>
+                    <div style="clear: both;"></div>
+                    <p  style="text-align: left;">
+                        邮政编码：111111                    </p>
+                    <p  style="text-align: left;">
+                        收货地址：北京-东城区--2222222                    </p>
+                </div>
+            </div>
+
+                <a href="/home/address/showAddress" style="width: 100%;" class="weui-cell weui-cell_access weui-cell_link">
+                    <div class="weui-cell__bd" style="text-align: left;">地址管理</div>
+                    <span class="weui-cell__ft"></span>
+                </a>
+
+        </div>
+
+
+                        <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <div class="weui-cells">
+                            <div class="weui-cell">
+                                <div style="height: 8em;width: 8em;">
+                                    <input type="hidden" name="imgs" value="/static/upload/2018-04-14/06dc5d565b383f65ff7c64973f239725.PNG">
+                                    <input type="hidden" name="name" value="测试">
+                                    <img style="height:inherit;line-height:inherit;" src="/static/upload/2018-04-14/06dc5d565b383f65ff7c64973f239725.PNG" alt="测试">
+                                </div>
+                                <h3 style="height: 8em;margin-top: 1em;">测试</h3>
+                            </div>
+                            <div class="weui-cell">
+                                价格：<span id="price">1.00</span> RMB
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-count">
+                                    购买数量：
+                                    <a class="weui-count__btn weui-count__decrease"></a>
+                                    <input class="weui-count__number" type="number" name="goodnum" value="1">
+                                    <a class="weui-count__btn weui-count__increase"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    </div>
+</div>
+
+    <div class="weui-tabbar weui-flex">
+
+            <div class="weui-flex__item">
+                应付金额：<span id="moneny"></span>
+            </div>
+            <div class="weui-flex__item">
+                <a href="javascript:document.getElementById('myForm').submit();" class="weui-btn weui-btn_warn">立即付款</a>
+            </div>
+
+    </div>
+</form>
+
+<!--<div class="weui-footer weui-footer_fixed-bottom">-->
+<!--    <p class="weui-footer__text">-->
+<!--        <span>Design By：DMF</span> |-->
+<!--        <span>关于我</span>-->
+<!--    </p>-->
+<!--</div>-->
+
+
+<script src="../../../static/public/js/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+<script src="../../../static/public/js/jquery-weui.js"></script>
+<script type='text/javascript' src='../../../static/public/js/swiper.js' charset='utf-8'></script>
+<script>
+
+    function changeTwoDecimal_f(x) {
+        var f_x = parseFloat(x);
+        if (isNaN(f_x)) {
+            alert('function:changeTwoDecimal->parameter error');
+            return false;
+        }
+        var f_x = Math.round(x * 100) / 100;
+        var s_x = f_x.toString();
+        var pos_decimal = s_x.indexOf('.');
+        if (pos_decimal < 0) {
+            pos_decimal = s_x.length;
+            s_x += '.';
+        }
+        while (s_x.length <= pos_decimal + 2) {
+            s_x += '0';
+        }
+        return s_x;
+    }
+
+    $(function(){
+        var $input = $(':input[name=goodnum]');
+        var number = parseInt($input.val() || "0");
+        var price = $('#price').html();
+        var moneny = changeTwoDecimal_f(Math.round(parseFloat(price*100*number))/100);
+        $('#moneny').html(moneny);
+    });
+
+    var MAX = 99, MIN = 1;
+    $('.weui-count__decrease').click(function (e) {
+        var $input = $(e.currentTarget).parent().find('.weui-count__number');
+        var number = parseInt($input.val() || "0") - 1
+        if (number < MIN) number = MIN;
+        $input.val(number);
+        var price = $('#price').html();
+        var moneny = changeTwoDecimal_f(Math.round(parseFloat(price*100*number))/100);
+        $('#moneny').html(moneny);
+    })
+    $('.weui-count__increase').click(function (e) {
+        var $input = $(e.currentTarget).parent().find('.weui-count__number');
+        var number = parseInt($input.val() || "0") + 1
+        if (number > MAX) number = MAX;
+        $input.val(number);
+        var price = $('#price').html();
+        var moneny = changeTwoDecimal_f(Math.round(parseFloat(price*100*number))/100);
+        $('#moneny').html(moneny);
+    })
+
+</script>

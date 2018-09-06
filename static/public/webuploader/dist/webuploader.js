@@ -5791,7 +5791,7 @@
                     writeByte((value   )&0xFF);
                 }
     
-                // DCT & quantization core
+                // DCT & quantization Core
                 function fDCTQuant(data, fdtbl)
                 {
                     var d0, d1, d2, d3, d4, d5, d6, d7;

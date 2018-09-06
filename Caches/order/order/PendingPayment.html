@@ -1,0 +1,282 @@
+
+<head>
+        <title>微信水果商城</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../../../static/public/css/weui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/jquery-weui.css">
+        <style>
+                html,body{
+                        background-color: #cec4ba;
+                }
+                 .bar-nav {
+                         top: 0;
+                 }
+                .bar {
+
+                        right: 0;
+                        left: 0;
+                        z-index: 10;
+                        height: 2.2rem;
+                        padding-right: 0.5rem;
+                        padding-left: 0.5rem;
+                        background-color: #f7f7f8;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                }
+                .bar .button-nav.pull-left {
+                        margin-left: -0.25rem;
+                }
+                .bar .button.pull-left {
+                        margin-right: 0.5rem;
+                }
+                .bar .button-link {
+                        top: 0;
+                        padding: 0;
+                        font-size: 0.8rem;
+                        line-height: 2.2rem;
+                        height: 2.2rem;
+                        color: #0894ec;
+                        border: 0;
+                }
+                .bar .button {
+                        position: relative;
+                        z-index: 20;
+                        margin-top: 0;
+                        font-weight: 400;
+                }
+                .button {
+                        border: 1px solid #0894ec;
+                        color: #0894ec;
+                        text-decoration: none;
+                        text-align: center;
+                        display: block;
+                        border-radius: 0.25rem;
+                        line-height: 1.25rem;
+                        box-sizing: border-box;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -ms-appearance: none;
+                        appearance: none;
+                        background: none;
+                        padding: 0 0.5rem;
+                        margin: 0;
+                        height: 1.35rem;
+                        white-space: nowrap;
+                        position: relative;
+                        text-overflow: ellipsis;
+                        font-size: 0.7rem;
+                        font-family: inherit;
+                        cursor: pointer;
+                }
+                .pull-left {
+                        float: left;
+                }
+
+                .bar .button .icon {
+                        padding: 0;
+                }
+                .bar .icon {
+                        position: relative;
+                        z-index: 20;
+                        padding: .5rem .1rem;
+                        font-size: 1rem;
+                        line-height: 1.2rem;
+                }
+                .icon {
+                        font-family: "iconfont-sm" !important;
+                        font-style: normal;
+                        display: inline-block;
+                        vertical-align: middle;
+                        background-size: 100% auto;
+                        background-position: center;
+                        -webkit-font-smoothing: antialiased;
+                        -webkit-text-stroke-width: 0.2px;
+                        -moz-osx-font-smoothing: grayscale;
+                }
+        </style>
+        <script src="../../../static/public/js/jquery-3.2.1.min.js"></script>
+</head>
+<header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back" href="/home/index/person">
+                &lt;返回
+        </a>
+
+        <h1 class="title" style="text-align: center;"></h1>
+</header>
+<body ontouchstart="">
+
+    
+    <div class="weui-cells weui-cells_form"  style="margin-bottom: 1em;">                <div class="weui-cell">
+                    <div style="height: 8em;width: 8em;">
+                        <img style="height:inherit;line-height:inherit;"
+                             src="http://img.alicdn.com/imgextra/i3/2939922051/TB2C3DDXSCWBuNjy0FhXXb6EVXa_!!2939922051.jpg_2200x2200Q50s50.jpg_.webp"
+                             alt="王小二 四川蒲江黄心猕猴桃 新鲜水果包邮当季奇异果泥猴桃弥猴桃">
+                    </div>
+                    <h3 style="height: 8em;margin-top: 1em;">王小二 四川蒲江黄心猕猴桃 新鲜水果包邮当季奇异果泥猴桃弥猴桃</h3>
+                </div>
+                <div class="weui-cell">
+                    价格：<span id="price">35.80</span> RMB
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-count">
+                        购买数量：3                        <input class="weui-count__number" type="hidden" name="goodnum"
+                               value="3">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <span class="weui-flex__item">金额：107.4</span>
+                    <span class="weui-flex__item" style="text-align: right;">
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="deletePayment?detailid=21">取消订单</a>
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="payment?detailid=21">付款</a>
+                    </span>
+
+                </div>
+                </div><div class="weui-cells weui-cells_form"  style="margin-bottom: 1em;">                <div class="weui-cell">
+                    <div style="height: 8em;width: 8em;">
+                        <img style="height:inherit;line-height:inherit;"
+                             src="http://img.alicdn.com/imgextra/i1/2261144254/TB1l5.XXH9YBuNjy0FgXXcxcXXa_!!0-item_pic.jpg_2200x2200Q50s50.jpg_.webp"
+                             alt="【YQYQ】智利车厘子4斤双J28-30mm新鲜大果年货礼盒送礼更体面">
+                    </div>
+                    <h3 style="height: 8em;margin-top: 1em;">【YQYQ】智利车厘子4斤双J28-30mm新鲜大果年货礼盒送礼更体面</h3>
+                </div>
+                <div class="weui-cell">
+                    价格：<span id="price">178.00</span> RMB
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-count">
+                        购买数量：4                        <input class="weui-count__number" type="hidden" name="goodnum"
+                               value="4">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <span class="weui-flex__item">金额：712</span>
+                    <span class="weui-flex__item" style="text-align: right;">
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="deletePayment?detailid=22">取消订单</a>
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="payment?detailid=22">付款</a>
+                    </span>
+
+                </div>
+                </div><div class="weui-cells weui-cells_form"  style="margin-bottom: 1em;">                <div class="weui-cell">
+                    <div style="height: 8em;width: 8em;">
+                        <img style="height:inherit;line-height:inherit;"
+                             src="http://img.alicdn.com/imgextra/i1/1910146537/TB1AsuYXL9TBuNjy0FcXXbeiFXa_!!0-item_pic.jpg_2200x2200Q50s50.jpg_.webp"
+                             alt="越南红心火龙果2个(大果)410g以上/个">
+                    </div>
+                    <h3 style="height: 8em;margin-top: 1em;">越南红心火龙果2个(大果)410g以上/个</h3>
+                </div>
+                <div class="weui-cell">
+                    价格：<span id="price">49.90</span> RMB
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-count">
+                        购买数量：3                        <input class="weui-count__number" type="hidden" name="goodnum"
+                               value="3">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <span class="weui-flex__item">金额：149.7</span>
+                    <span class="weui-flex__item" style="text-align: right;">
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="deletePayment?detailid=18">取消订单</a>
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="payment?detailid=18">付款</a>
+                    </span>
+
+                </div>
+                </div><div class="weui-cells weui-cells_form"  style="margin-bottom: 1em;">                <div class="weui-cell">
+                    <div style="height: 8em;width: 8em;">
+                        <img style="height:inherit;line-height:inherit;"
+                             src="/static/upload/2018-04-14/06dc5d565b383f65ff7c64973f239725.PNG"
+                             alt="测试">
+                    </div>
+                    <h3 style="height: 8em;margin-top: 1em;">测试</h3>
+                </div>
+                <div class="weui-cell">
+                    价格：<span id="price">1.00</span> RMB
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-count">
+                        购买数量：4                        <input class="weui-count__number" type="hidden" name="goodnum"
+                               value="4">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <span class="weui-flex__item">金额：4</span>
+                    <span class="weui-flex__item" style="text-align: right;">
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="deletePayment?detailid=23">取消订单</a>
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="payment?detailid=23">付款</a>
+                    </span>
+
+                </div>
+                </div><div class="weui-cells weui-cells_form"  style="margin-bottom: 1em;">                <div class="weui-cell">
+                    <div style="height: 8em;width: 8em;">
+                        <img style="height:inherit;line-height:inherit;"
+                             src="/static/upload/2018-04-14/a4597913dc73edb5184411fd1ddd956a.PNG"
+                             alt="测试">
+                    </div>
+                    <h3 style="height: 8em;margin-top: 1em;">测试</h3>
+                </div>
+                <div class="weui-cell">
+                    价格：<span id="price">1.00</span> RMB
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-count">
+                        购买数量：5                        <input class="weui-count__number" type="hidden" name="goodnum"
+                               value="5">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <span class="weui-flex__item">金额：5</span>
+                    <span class="weui-flex__item" style="text-align: right;">
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="deletePayment?detailid=17">取消订单</a>
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="payment?detailid=17">付款</a>
+                    </span>
+
+                </div>
+                </div><div class="weui-cells weui-cells_form"  style="margin-bottom: 1em;">                <div class="weui-cell">
+                    <div style="height: 8em;width: 8em;">
+                        <img style="height:inherit;line-height:inherit;"
+                             src="/static/upload/2018-04-14/a4597913dc73edb5184411fd1ddd956a.PNG"
+                             alt="测试">
+                    </div>
+                    <h3 style="height: 8em;margin-top: 1em;">测试</h3>
+                </div>
+                <div class="weui-cell">
+                    价格：<span id="price">1.00</span> RMB
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-count">
+                        购买数量：1                        <input class="weui-count__number" type="hidden" name="goodnum"
+                               value="1">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <span class="weui-flex__item">金额：1</span>
+                    <span class="weui-flex__item" style="text-align: right;">
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="deletePayment?detailid=20">取消订单</a>
+                        <a style="padding:0.25em;border: 1px solid #777777;margin-right: 1em;" class="weui-btn_default" href="payment?detailid=20">付款</a>
+                    </span>
+
+                </div>
+                </div>
+
+<audio controls="controls" style="display: none;"></audio></body>
+
+
+<!--<div class="weui-footer weui-footer_fixed-bottom">-->
+<!--    <p class="weui-footer__text">-->
+<!--        <span>Design By：DMF</span> |-->
+<!--        <span>关于我</span>-->
+<!--    </p>-->
+<!--</div>-->
+
+
+<script src="../../../static/public/js/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+<script src="../../../static/public/js/jquery-weui.js"></script>
+<script type='text/javascript' src='../../../static/public/js/swiper.js' charset='utf-8'></script>

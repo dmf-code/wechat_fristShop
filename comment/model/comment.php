@@ -6,16 +6,18 @@
  * Time: 11:57
  */
 
-namespace comment\model;
+namespace Comment\Model;
 
 
-class comment
+use Rice\Core\Db;
+
+class Comment
 {
     /*
      * 获取单条评论
      */
     public function getComment($goodid){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "
                 SELECT
                         `commentid`,`goodid`,`userid`,`headimgurl`,
@@ -40,7 +42,7 @@ class comment
      * 获取该商品所有评论
      */
     public function getComments($goodid){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "
                 SELECT
                         `commentid`,`goodid`,`userid`,`headimgurl`,

@@ -5,7 +5,7 @@
  * Date: 2018/1/13
  * Time: 13:21
  */
-require_once ROOT_PATH . "/admin/tpl/public/header.php";
+require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
 ?>
 
 <form method="post" id="form-msg" class="sui-form form-horizontal sui-validate" novalidate="novalidate">
@@ -82,5 +82,5 @@ require_once ROOT_PATH . "/admin/tpl/public/header.php";
 
 
 <?php
-require_once ROOT_PATH."/admin/tpl/public/footer.php";
+require_once ROOT_PATH . "/admin/Tpl/Public/footer.php";
 ?>

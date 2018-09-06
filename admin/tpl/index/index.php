@@ -5,7 +5,7 @@
  * Date: 2018/1/13
  * Time: 13:51
  */
-require_once ROOT_PATH . "/admin/tpl/public/header.php";
+require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
 ?>
 <style>
     .d-index{padding: 2em;}
@@ -18,5 +18,5 @@ require_once ROOT_PATH . "/admin/tpl/public/header.php";
 </div>
 
 <?php
-require_once ROOT_PATH."/admin/tpl/public/footer.php";
+require_once ROOT_PATH . "/admin/Tpl/Public/footer.php";
 ?>

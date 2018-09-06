@@ -179,7 +179,7 @@ package com.utils {
 				nPlains = coreHeader.readUnsignedShort();
 				nBitsPerPixel = coreHeader.readUnsignedShort();
 			} catch ( e:IOError ) {
-				throw new VerifyError("invalid core header");
+				throw new VerifyError("invalid Core header");
 			}
 		}
 		

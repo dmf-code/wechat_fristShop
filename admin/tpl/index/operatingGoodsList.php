@@ -5,7 +5,7 @@
  * Date: 2018/1/13
  * Time: 14:35
  */
-require_once ROOT_PATH . "/admin/tpl/public/header.php";
+require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
     global $dcache;
     $goods = $dcache->getVal('goods');
     $pSum = $dcache->getVal('pSum');
@@ -72,5 +72,5 @@ require_once ROOT_PATH . "/admin/tpl/public/header.php";
         </ul>
     </div>
 <?php
-    require_once ROOT_PATH."/admin/tpl/public/footer.php";
+    require_once ROOT_PATH . "/admin/Tpl/Public/footer.php";
 ?>
