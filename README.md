@@ -1,6 +1,10 @@
 # wechat_fristShop
 微信公众号上部署水果商城
 
+##框架
+此项目采用我自己设计的框架，具体的框架代码.
+[框架地址](https://github.com/dmf-code/Rice)
+
 ##框架流程
 
 ![](lct.jpg)
@@ -10,11 +14,11 @@
 1.隐藏入口文件
 ```$xslt
 location / {
-            if (!-e $request_filename) {
-	            rewrite ^(.*)$ /index.php/$1 last;
-            }
-            index  index.html index.htm index.php;
-        }
+    if (!-e $request_filename) {
+        rewrite ^(.*)$ /index.php/$1 last;
+    }
+    index  index.html index.htm index.php;
+}
 ```
 
 2.配置PHP-FPM
