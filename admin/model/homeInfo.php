@@ -6,10 +6,12 @@
  * Time: 13:32
  */
 
-namespace admin\model;
+namespace Admin\Model;
 
 
-class homeInfo
+use Rice\Core\Db;
+
+class HomeInfo
 {
     public function __construct()
     {
@@ -18,7 +20,7 @@ class homeInfo
      * 增加图片
      */
     public function addImgs($data){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "INSERT INTO `wx_shop_home_info` (
                   `imgs`,`detailid`
                 )VALUES (
@@ -43,7 +45,7 @@ class homeInfo
      * 更新轮播图数据
      */
     public function updateHomeCarousel($data){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
 
         $sql = "UPDATE
                        `wx_shop_home_info`
@@ -74,7 +76,7 @@ class homeInfo
      * 删除轮播图数据
      */
     public function deleteHomeCarousel($homeInfoId){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
 
         $sql = "UPDATE
                        `wx_shop_home_info`
@@ -100,7 +102,7 @@ class homeInfo
      */
     public function getHomeCarousel($id=null){
 
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "SELECT
                     `homeInfoId`,`imgs`,`detailid`,`status`
                 FROM

@@ -6,15 +6,17 @@
  * Time: 23:04
  */
 
-namespace admin\model;
+namespace Admin\Model;
 
-class category
+use Rice\Core\Db;
+
+class Category
 {
     /*
      * 增加商品标签
      */
     public function addCategory($category){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = 'INSERT INTO `wx_shop_category` (
                   `name`,`img`,`status`
                 )VALUES (
@@ -37,7 +39,7 @@ class category
      * 获取商品标签
      */
     public function getCategoryList(){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = 'SELECT `categoryid`,`name`,`status`
                 FROM `wx_shop_category`
                 WHERE `status`=1';
@@ -53,7 +55,7 @@ class category
      * 更新商品标签
      */
     public function updateCategory($category){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = 'UPDATE
                     `wx_shop_category`
                 SET
@@ -80,7 +82,7 @@ class category
      */
     public function deleteCategory($id){
 
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "UPDATE `wx_shop_category`
                 SET `status`=0
                 WHERE `categoryid`=:id";

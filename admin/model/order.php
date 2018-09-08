@@ -6,17 +6,19 @@
  * Time: 12:50
  */
 
-namespace admin\model;
+namespace Admin\Model;
 
 
-class order
+use Rice\Core\Db;
+
+class Order
 {
     /*
      * 获取订单列表
      */
     public function getOrderList(){
 
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
 
         $sql = "SELECT * FROM `wx_shop_order`";
 
@@ -32,11 +34,11 @@ class order
      * 更新订单状态
      */
     public function updateOrder($orderid,$status){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         if($status<2){
             $status++;
         }else{
-            header('Location: http://wx.dmf95.cn/fruitShop/index.php/admin/index/operatingOrderList');
+            header('Location: /admin/index/operatingOrderList');
             return;
         }
         $sql = "UPDATE `wx_shop_order`
@@ -49,6 +51,6 @@ class order
         $db->query($sql)
             ->bind(array('status'=>$status,'orderid'=>$orderid))
             ->execute();
-        header('Location: http://wx.dmf95.cn/fruitShop/index.php/admin/index/operatingOrderList');
+        header('Location: /admin/index/operatingOrderList');
     }
 }

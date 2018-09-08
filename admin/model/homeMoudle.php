@@ -6,10 +6,12 @@
  * Time: 15:15
  */
 
-namespace admin\model;
+namespace Admin\Model;
 
 
-class homeMoudle
+use Rice\Core\Db;
+
+class HomeMoudle
 {
 
     /*
@@ -17,7 +19,7 @@ class homeMoudle
      */
     public function addMoudle($data){
 
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "INSERT INTO `wx_shop_home_moudle` (
                   `name`,`recommend`
                 ) VALUES (
@@ -41,7 +43,7 @@ class homeMoudle
      */
     public function getMoudle(){
 
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "SELECT `name`,`recommend` FROM `wx_shop_home_moudle`";
         $data = $db->query($sql)
                     ->fecthAll();
@@ -67,7 +69,7 @@ class homeMoudle
      * 获取水果模块列表
      */
     public function getMoudleList(){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "SELECT `moudleid`,`name`,`recommend`,`status` FROM `wx_shop_home_moudle`";
         $info = $db->query($sql)
                     ->fetchAll();

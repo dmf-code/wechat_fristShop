@@ -6,11 +6,11 @@
  * Time: 14:35
  */
 require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
-    global $dcache;
-    $goods = $dcache->getVal('goods');
-    $pSum = $dcache->getVal('pSum');
-    $page = $dcache->getVal('page');
-    $offset = $dcache->getVal('offset');
+    $cache = \Rice\Core\Core::get('Cache');
+    $goods = $dcache->goods;
+    $pSum = $dcache->pSum;
+    $page = $dcache->page;
+    $offset = $dcache->offset;
 ?>
 
 <table class="sui-table table-zebra">
@@ -50,27 +50,37 @@ require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
 
     </tbody>
 </table>
-    <div class="sui-pagination" style="text-align: center;">
-        <ul>
-            <li class="prev <?php echo $page-1<0?'disabled':''; ?>"><a href="operatingGoodsList?page=<?php echo $page-1<0?$page:$page-1; ?>">«</a></li>
-            <?php
-                $max = $pSum/$offset+($pSum%$offset>0?1:0);
-                for($i=0;$i<$max;++$i) {
+<?php
+    if ($pSum != 0) {
+        ?>
+        <div class="sui-pagination" style="text-align: center;">
+            <ul>
+                <li class="prev <?php echo $page - 1 < 0 ? 'disabled' : ''; ?>"><a
+                            href="operatingGoodsList?page=<?php echo $page - 1 < 0 ? $page : $page - 1; ?>">«</a></li>
+                <?php
+                $max = $pSum / $offset + ($pSum % $offset > 0 ? 1 : 0);
+                for ($i = 0; $i < $max; ++$i) {
                     if ($i == $page) {
                         ?>
-                        <li class="active"><a href="operatingGoodsList?page=<?php echo $i; ?>"><?php echo $i+1; ?></a>
+                        <li class="active"><a href="operatingGoodsList?page=<?php echo $i; ?>"><?php echo $i + 1; ?></a>
                         </li>
                         <?php
                     } else {
                         ?>
-                        <li><a href="operatingGoodsList?page=<?php echo $i; ?>"><?php echo $i+1; ?></a></li>
+                        <li><a href="operatingGoodsList?page=<?php echo $i; ?>"><?php echo $i + 1; ?></a></li>
                         <?php
                     }
                 }
-            ?>
-            <li class="next <?php echo $page+1>=$pSum/$offset?'disabled':''; ?>"><a href="operatingGoodsList?page=<?php echo $page+1>=$pSum/$offset?$page:$page+1; ?>">»</a></li>
-        </ul>
-    </div>
+                ?>
+
+                <li class="next <?php echo $page + 1 >= $pSum / $offset ? 'disabled' : ''; ?>">
+                    <a href="operatingGoodsList?page=<?php echo $page + 1 >= $pSum / $offset ? $page : $page + 1; ?>">»</a>
+                </li>
+            </ul>
+        </div>
+        <?php
+    }
+?>
 <?php
     require_once ROOT_PATH . "/admin/Tpl/Public/footer.php";
 ?>

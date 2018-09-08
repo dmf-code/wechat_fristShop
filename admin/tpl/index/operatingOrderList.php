@@ -6,8 +6,8 @@
  * Time: 21:36
  */
 require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
-    global $dcache;
-    $orderList = $dcache->getVal('orderList');
+    $cache = \Rice\Core\Core::get('Cache');
+    $orderList = $cache->orderList;
 ?>
 
 <table class="sui-table table-zebra">

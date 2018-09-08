@@ -6,8 +6,8 @@
  * Time: 21:36
  */
 require_once ROOT_PATH . "/admin/Tpl/Public/header.php";
-    global $dcache;
-    $moudleList = $dcache->getVal('moudleList');
+    $cache = \Rice\Core\Core::get('Cache');
+    $moudleList = $cache->moudleList;
 ?>
 
 <table class="sui-table table-zebra">

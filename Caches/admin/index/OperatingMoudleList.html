@@ -1,0 +1,122 @@
+<html>
+<head>
+        <title>微信商城后台</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../../static/public/css/sui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/public.css">
+        <script src="../../../static/public/js/jquery-3.2.1.min.js"></script>
+        <script src="../../../static/public/js/sui.min.js"></script>
+        <script src="../../../static/public/js/extend.js?time=1536413657"></script>
+</head>
+<style>
+        body{overflow-x: hidden;}
+</style>
+
+<body>
+<div class="sui-row-fluid">
+        <!-- header start -->
+        <div class="sui-navbar">
+                <div class="navbar-inner">
+                        <div class="sui-container">
+                                <a href="#" class="sui-brand">
+                                        <i class="sui-icon icon-tb-shop"></i>
+                                        微信商城后台
+                                </a>
+                        </div>
+                </div>
+        </div>
+        <!-- header end -->
+</div>
+
+<div class="sui-row-fluid">
+
+        <div class="span2 white">
+                <ul class="sui-nav nav-list font-center font1-5">
+                        <li><a href="admin">首页</a></li>
+                        <li><a href="addHomeCarousel">商城首页轮播图</a></li>
+                        <li><a href="operatingHomeCarousel">商城首页轮播图列表</a></li>
+                        <li><a href="addHomeMoudle">商城首页模块</a></li>
+                        <li><a href="operatingMoudleList">商城首页模块列表</a></li>
+                        <li><a href="customMenu">微信自定义菜单</a></li>
+                        <li><a href="addGoods">添加商品</a></li>
+                        <li><a href="operatingGoodsList">商品列表</a></li>
+                        <li><a href="addCategory">添加水果分类</a></li>
+                        <li><a href="operatingCategoryList">水果分类列表</a></li>
+                        <li><a href="operatingOrderList">订单列表</a></li>
+                </ul>
+        </div>
+
+        <div class="span10 white">
+                <div id="content">
+<table class="sui-table table-zebra">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>名字</th>
+        <th>推荐</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>1</td>
+            <td>今日推荐</td>
+            <td>9,15</td>
+            <td>1</td>
+            <td>
+                <a href=""><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href=""><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>2</td>
+            <td>国产水果</td>
+            <td>11,12,18,25</td>
+            <td>1</td>
+            <td>
+                <a href=""><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href=""><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>3</td>
+            <td>进口水果</td>
+            <td>17,22,26,38</td>
+            <td>1</td>
+            <td>
+                <a href=""><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href=""><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+
+
+            </div>
+        </div>
+    </div>
+<div class="sui-row-fluid font-center font1 white" style="height:5em;line-height:5em;margin-top: 0.5em;">
+            <span>Design By：DMF</span> |
+            <span>关于我</span>
+</div>
+
+<!-- Modal-->
+<div id="myModal" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+                <h4 id="myModalLabel" class="modal-title">消息提示</h4>
+            </div>
+            <div class="modal-body">添加超过限制，创建失败</div>
+            <div class="modal-footer">
+                <button type="button" data-ok="modal" class="sui-btn btn-primary btn-large">ok</button>
+                <button type="button" data-dismiss="modal" class="sui-btn btn-default btn-large">dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>

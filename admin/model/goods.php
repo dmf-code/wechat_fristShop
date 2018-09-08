@@ -6,14 +6,16 @@
  * Time: 14:37
  */
 
-namespace admin\model;
+namespace Admin\Model;
 
 
-class goods
+use Rice\Core\Db;
+
+class Goods
 {
     //添加商品
     public function addGoods($good){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = 'INSERT INTO `wx_shop_goods` (
                 `name`,`categoryid`,`imgUrl`,`introductionImgs`,`price`,`netWeight`,`packaging`,`singleFruitWeight`,
                 `brand`,`madeIn`,`fruitType`,`factoryName`,`factoryAddr`,`factoryPhone`,
@@ -50,7 +52,7 @@ class goods
 
     //删除商品
     public function deleteGoods($goodid){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = 'UPDATE
                     `wx_shop_goods`
                 SET
@@ -73,7 +75,7 @@ class goods
      * 获取商品
      */
     public function getGood($goodid){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "SELECT
                     `name`,`categoryid`,`imgUrl`,`introductionImgs`,`price`,`netWeight`,`packaging`,`singleFruitWeight`,
                     `brand`,`madeIn`,`fruitType`,`factoryName`,`factoryAddr`,`factoryPhone`,
@@ -101,7 +103,7 @@ class goods
     */
     public function getGoodsList($page=0,$offset=10){
 
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
 
         $sql = "SELECT `id`,`name`,`price`,`netWeight`,`brand`,`madeIn`,`fruitType`
                FROM `wx_shop_goods`
@@ -122,7 +124,7 @@ class goods
      * 获取所有的列数
      */
     public function getCount($table){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
 
         $sql = "SELECT COUNT(*) as cnt FROM `".$table."` WHERE `status`=1 ";
 

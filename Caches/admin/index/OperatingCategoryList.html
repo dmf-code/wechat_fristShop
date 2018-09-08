@@ -1,0 +1,199 @@
+<html>
+<head>
+        <title>微信商城后台</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../../static/public/css/sui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/public.css">
+        <script src="../../../static/public/js/jquery-3.2.1.min.js"></script>
+        <script src="../../../static/public/js/sui.min.js"></script>
+        <script src="../../../static/public/js/extend.js?time=1536414184"></script>
+</head>
+<style>
+        body{overflow-x: hidden;}
+</style>
+
+<body>
+<div class="sui-row-fluid">
+        <!-- header start -->
+        <div class="sui-navbar">
+                <div class="navbar-inner">
+                        <div class="sui-container">
+                                <a href="#" class="sui-brand">
+                                        <i class="sui-icon icon-tb-shop"></i>
+                                        微信商城后台
+                                </a>
+                        </div>
+                </div>
+        </div>
+        <!-- header end -->
+</div>
+
+<div class="sui-row-fluid">
+
+        <div class="span2 white">
+                <ul class="sui-nav nav-list font-center font1-5">
+                        <li><a href="admin">首页</a></li>
+                        <li><a href="addHomeCarousel">商城首页轮播图</a></li>
+                        <li><a href="operatingHomeCarousel">商城首页轮播图列表</a></li>
+                        <li><a href="addHomeMoudle">商城首页模块</a></li>
+                        <li><a href="operatingMoudleList">商城首页模块列表</a></li>
+                        <li><a href="customMenu">微信自定义菜单</a></li>
+                        <li><a href="addGoods">添加商品</a></li>
+                        <li><a href="operatingGoodsList">商品列表</a></li>
+                        <li><a href="addCategory">添加水果分类</a></li>
+                        <li><a href="operatingCategoryList">水果分类列表</a></li>
+                        <li><a href="operatingOrderList">订单列表</a></li>
+                </ul>
+        </div>
+
+        <div class="span10 white">
+                <div id="content">
+<table class="sui-table table-zebra">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>名字</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>1</td>
+            <td>奇异果</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=1"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=1"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>2</td>
+            <td>车厘子/樱桃</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=2"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=2"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>3</td>
+            <td>芒果</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=3"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=3"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>4</td>
+            <td>牛油果</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=4"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=4"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>5</td>
+            <td>火龙果</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=5"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=5"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>6</td>
+            <td>苹果</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=6"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=6"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>7</td>
+            <td>橙子</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=7"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=7"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>8</td>
+            <td>凤梨</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=8"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=8"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>9</td>
+            <td>榴莲</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=9"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=9"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>10</td>
+            <td>山竹</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=10"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=10"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>11</td>
+            <td>柠檬</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=11"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=11"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+                <tr>
+            <td>12</td>
+            <td>蓝莓</td>
+            <td>1</td>
+            <td>
+                <a href="updateCategory?id=12"><button class="sui-btn btn-bordered btn-danger">编辑</button></a>
+                <a href="deleteCategory?id=12"><button class="sui-btn btn-bordered btn-danger">删除</button></a>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+
+
+            </div>
+        </div>
+    </div>
+<div class="sui-row-fluid font-center font1 white" style="height:5em;line-height:5em;margin-top: 0.5em;">
+            <span>Design By：DMF</span> |
+            <span>关于我</span>
+</div>
+
+<!-- Modal-->
+<div id="myModal" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+                <h4 id="myModalLabel" class="modal-title">消息提示</h4>
+            </div>
+            <div class="modal-body">添加超过限制，创建失败</div>
+            <div class="modal-footer">
+                <button type="button" data-ok="modal" class="sui-btn btn-primary btn-large">ok</button>
+                <button type="button" data-dismiss="modal" class="sui-btn btn-default btn-large">dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>

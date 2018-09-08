@@ -1,0 +1,149 @@
+<html>
+<head>
+        <title>微信商城后台</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../../static/public/css/sui.min.css">
+        <link rel="stylesheet" href="../../../static/public/css/public.css">
+        <script src="../../../static/public/js/jquery-3.2.1.min.js"></script>
+        <script src="../../../static/public/js/sui.min.js"></script>
+        <script src="../../../static/public/js/extend.js?time=1536414094"></script>
+</head>
+<style>
+        body{overflow-x: hidden;}
+</style>
+
+<body>
+<div class="sui-row-fluid">
+        <!-- header start -->
+        <div class="sui-navbar">
+                <div class="navbar-inner">
+                        <div class="sui-container">
+                                <a href="#" class="sui-brand">
+                                        <i class="sui-icon icon-tb-shop"></i>
+                                        微信商城后台
+                                </a>
+                        </div>
+                </div>
+        </div>
+        <!-- header end -->
+</div>
+
+<div class="sui-row-fluid">
+
+        <div class="span2 white">
+                <ul class="sui-nav nav-list font-center font1-5">
+                        <li><a href="admin">首页</a></li>
+                        <li><a href="addHomeCarousel">商城首页轮播图</a></li>
+                        <li><a href="operatingHomeCarousel">商城首页轮播图列表</a></li>
+                        <li><a href="addHomeMoudle">商城首页模块</a></li>
+                        <li><a href="operatingMoudleList">商城首页模块列表</a></li>
+                        <li><a href="customMenu">微信自定义菜单</a></li>
+                        <li><a href="addGoods">添加商品</a></li>
+                        <li><a href="operatingGoodsList">商品列表</a></li>
+                        <li><a href="addCategory">添加水果分类</a></li>
+                        <li><a href="operatingCategoryList">水果分类列表</a></li>
+                        <li><a href="operatingOrderList">订单列表</a></li>
+                </ul>
+        </div>
+
+        <div class="span10 white">
+                <div id="content"><!--引入CSS-->
+<link rel="stylesheet" type="text/css" href="../../../static/public/webuploader/css/webuploader.css">
+<link rel="stylesheet" type="text/css" href="../../../static/image-upload/style.css" />
+<!--引入JS-->
+<script type="text/javascript" src="../../../static/public/webuploader/dist/webuploader.js"></script>
+
+<style>
+    #category-form{
+        padding: 0.5em;
+    }
+</style>
+
+<form id="category-form" action="addCategory" method="post" class="sui-form form-horizontal sui-validate">
+    <div class="control-group">
+        <span>分类名称：</span>
+        <div class="controls">
+            <input type="text" name="name" placeholder="分类名称">
+        </div>
+    </div>
+
+    商品图片：
+    <div id="wrapper">
+        <div id="container">
+            <!--头部，相册选择和格式选择-->
+
+            <div id="uploader">
+                <div class="queueList">
+                    <div id="dndArea" class="placeholder">
+                        <div id="filePicker"></div>
+                        <p>或将照片拖到这里，单次最多可选300张</p>
+                    </div>
+                </div>
+                <div class="statusBar" style="display:none;">
+                    <div class="progress">
+                        <span class="text">0%</span>
+                        <span class="percentage"></span>
+                    </div><div class="info"></div>
+                    <div class="btns">
+                        <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label"></label>
+        <div class="controls">
+            <input type="hidden" name="post" value="1">
+            <input type="hidden" name="uType" value="1">
+            <button type="submit" class="sui-btn btn-primary">提交</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    $("#goods-form").validate({
+        rules: {
+            name:{
+                required:true,
+                minlength: 1,
+                maxlength: 20
+            }
+        },
+        messages: {
+            name: ["亲，水果分类名不能为空哟","亲，水果分类名不能超过20个字"],
+        },
+        success: function() {
+            return true;
+        }
+    });
+</script>
+
+<script src="../../../static/image-upload/upload.js"></script>
+
+
+            </div>
+        </div>
+    </div>
+<div class="sui-row-fluid font-center font1 white" style="height:5em;line-height:5em;margin-top: 0.5em;">
+            <span>Design By：DMF</span> |
+            <span>关于我</span>
+</div>
+
+<!-- Modal-->
+<div id="myModal" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close">×</button>
+                <h4 id="myModalLabel" class="modal-title">消息提示</h4>
+            </div>
+            <div class="modal-body">添加超过限制，创建失败</div>
+            <div class="modal-footer">
+                <button type="button" data-ok="modal" class="sui-btn btn-primary btn-large">ok</button>
+                <button type="button" data-dismiss="modal" class="sui-btn btn-default btn-large">dismiss</button>
+            </div>
+        </div>
+    </div>
+</div>

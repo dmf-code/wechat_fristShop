@@ -6,10 +6,14 @@
  * Time: 16:09
  */
 
-namespace admin\controller;
+namespace Admin\Controller;
 
 
-class index extends \core\controller
+use Rice\Core\Controller;
+use Rice\Core\Core;
+use Rice\Core\Db;
+
+class Index extends Controller
 {
     private $tid;
     public function __construct()
@@ -25,7 +29,8 @@ class index extends \core\controller
 
     //获取已创建的自定义菜单信息
     public function getData(){
-        $wxlogic = \core\dphp::instance('\core\wxLogic');
+
+        $wxlogic = Core::instance('\Rice\Core\WxLogic');
         $json = $wxlogic->menu('select');
         echo $json;
     }
@@ -56,7 +61,7 @@ class index extends \core\controller
             }
         }
         //var_dump($menu);
-        $wxlogic = \core\dphp::instance('\core\wxLogic');
+        $wxlogic = Core::instance('\Rice\Core\WxLogic');
         $wxlogic->menu('delete');
         $json = $wxlogic->menu('create',\core\util::json_encode($menu));
 
@@ -65,7 +70,7 @@ class index extends \core\controller
 
     //删除自定义菜单
     public function deleteMenu(){
-        $wxlogic = \core\dphp::instance('\core\wxLogic');
+        $wxlogic = Core::instance('\core\wxLogic');
         $json = $wxlogic->menu('delete');
         $error = null;
         if(@$json->errcode!==0){
@@ -97,7 +102,7 @@ class index extends \core\controller
                 'factoryPhone'=>$this->getRequest('factoryPhone'),
                 'qualityGuaranteePeriod'=>$this->getRequest('qualityGuaranteePeriod'),
             );
-            $model = \core\dphp::instance('admin\model\goods');
+            $model = Core::instance('admin\model\goods');
             $info = $model->addGoods($good);
             if(!$info){
                 die('数据添加失败！');
@@ -112,7 +117,7 @@ class index extends \core\controller
     //更新商品
     public function updateGoods(){
         $goodid = $this->getRequest('id');
-        $goods = \core\dphp::instance('\admin\model\goods');
+        $goods = Core::instance('\admin\model\goods');
 //        if($this->getRequest('post')==1){
 //
 //        }
@@ -126,7 +131,7 @@ class index extends \core\controller
     //删除商品
     public function deleteGoods(){
         $goodid = $this->getRequest('id');
-        $goods = \core\dphp::instance('\admin\model\goods');
+        $goods = Core::instance('\admin\model\goods');
         $info = $goods->deleteGoods($goodid);
         if(!$info){
             $this->dispatchJump('删除失败',null,'http://wx.dmf95.cn/fruitShop/index.php/admin/index/operatingGoodsList');
@@ -142,7 +147,7 @@ class index extends \core\controller
             $page = $this->getRequest('page');
         }
 
-        $model = \core\dphp::instance('\admin\model\goods');
+        $model = Core::instance('\admin\model\goods');
         $goods = $model->getGoodsList($page,$offset);
         $pSum = $model->getCount('wx_shop_goods');
 
@@ -169,7 +174,7 @@ class index extends \core\controller
                 'name'=>$this->getRequest('name'),
                 'img'=>empty($imgs)?'':implode(',',$imgs)
             );
-            $model = \core\dphp::instance('\admin\model\category');
+            $model = Core::instance('\admin\model\category');
             $info = $model->addCategory($category);
             if(!$info){
                 $this->dispatchJump('水果标签数据添加失败！',null,'http://wx.dmf95.cn/fruitShop/index.php/admin/index/admin?tid=3');
@@ -194,7 +199,7 @@ class index extends \core\controller
                 'categoryid'=>$this->getRequest('id'),
                 'status'=>$this->getRequest('status')
             );
-            $model = \core\dphp::instance('\admin\model\category');
+            $model = Core::instance('\admin\model\category');
             $info = $model->updateCategory($category);
             if(!$info){
                 $this->dispatchJump('水果标签数据更新失败！',null,'http://wx.dmf95.cn/fruitShop/index.php/admin/index/updateCategory?id='.$category['categoryid']);
@@ -214,7 +219,7 @@ class index extends \core\controller
 
     //获取商品种类
     public function getCategory($categoryid){
-        $db = \core\db::getInstance();
+        $db = Db::getInstance();
         $sql = "SELECT
                       `categoryid`,`img`,`name`,`status`
                 FROM
@@ -236,7 +241,7 @@ class index extends \core\controller
     //删除商品种类
     public function deleteCategory(){
         $id = $this->getRequest('id');
-        $category = \core\dphp::instance('\admin\model\category');
+        $category = Core::instance('\admin\model\category');
         $info = $category->deleteCategory($id);
         if(!$info){
             $this->dispatchJump('删除商品标签失败！',null,'http://wx.dmf95.cn/fruitShop/index.php/admin/index/operatingCategoryList');
@@ -248,7 +253,7 @@ class index extends \core\controller
 
     //获取商品种类列表
     public function operatingCategoryList(){
-        $category = \core\dphp::instance('\admin\model\category');
+        $category = Core::instance('\admin\model\category');
         $info = $category->getCategoryList();
         if(!$info){
             return false;
@@ -260,7 +265,7 @@ class index extends \core\controller
 
     //获取商品种类列表api
     public function getCategoryList(){
-        $category = \core\dphp::instance('\admin\model\category');
+        $category = Core::instance('\admin\model\category');
         $info = $category->getCategoryList();
         if(!$info){
             return false;
@@ -283,7 +288,7 @@ class index extends \core\controller
             }else{
                 $data['imgs'] = '';
             }
-            $homeInfo = \core\dphp::instance('\admin\model\homeInfo');
+            $homeInfo = Core::instance('\admin\model\homeInfo');
             $info = $homeInfo->addImgs($data);
             if(!$info){
                 $this->dispatchJump('添加失败！',null,'http://wx.dmf95.cn/fruitShop/index.php/admin/index/operatingHomeCarousel');
@@ -312,7 +317,7 @@ class index extends \core\controller
             }
 
             $data['homeInfoId'] = $homeInfoId;
-            $homeInfo = \core\dphp::instance('\admin\model\homeInfo');
+            $homeInfo = Core::instance('\admin\model\homeInfo');
             $info = $homeInfo->updateHomeCarousel($data);
 
             if(!$info){
@@ -323,7 +328,7 @@ class index extends \core\controller
             }
             return;
         }
-        $homeInfo = \core\dphp::instance('\admin\model\homeInfo');
+        $homeInfo = Core::instance('\admin\model\homeInfo');
         $homeCarousel = $homeInfo->getHomeCarousel($homeInfoId);
         $this->assign('homeCarousel',$homeCarousel);
 
@@ -335,7 +340,7 @@ class index extends \core\controller
      */
     public function deleteHomeCarousel(){
         $homeInfoId = $this->getRequest('id');
-        $homeInfo = \core\dphp::instance('\admin\model\homeInfo');
+        $homeInfo = Core::instance('\admin\model\homeInfo');
         $info = $homeInfo->deleteHomeCarousel($homeInfoId);
         if(empty($info)){
             $this->dispatchJump('删除失败',null,'http://wx.dmf95.cn/fruitShop/index.php/admin/index/operatingHomeCarousel');
@@ -355,7 +360,7 @@ class index extends \core\controller
                 'name'=>$this->getRequest('name'),
                 'recommend'=>$this->getRequest('recommend')
             );
-            $homeMoudle = \core\dphp::instance('\admin\model\homeMoudle');
+            $homeMoudle = Core::instance('\admin\model\homeMoudle');
             $info = $homeMoudle->addMoudle($data);
             if(!$info){
                 $this->dispatchJump('模块添加失败！',null,'http://wx.dmf95.cn/fruitShop/index.php/admin/index/addHomeMoudle');
@@ -375,7 +380,7 @@ class index extends \core\controller
          */
     public function operatingHomeCarousel(){
 
-        $homeInfo = \core\dphp::instance('\admin\model\homeInfo');
+        $homeInfo = Core::instance('\Admin\Model\HomeInfo');
 
         $homeCarousel = $homeInfo->getHomeCarousel();
 
@@ -389,7 +394,7 @@ class index extends \core\controller
      */
     public function operatingMoudleList(){
 
-        $homeMoudle = \core\dphp::instance('\admin\model\homeMoudle');
+        $homeMoudle = Core::instance('\Admin\Model\HomeMoudle');
 
         $moudleList = $homeMoudle->getMoudleList();
 
@@ -403,7 +408,7 @@ class index extends \core\controller
      */
     public function operatingOrderList(){
 
-        $order = \core\dphp::instance('\admin\model\order');
+        $order = Core::instance('\admin\model\order');
 
         $orderList = $order->getOrderList();
 
@@ -416,7 +421,7 @@ class index extends \core\controller
      * 更新订单
      */
     public function updateOrder(){
-        $order = \core\dphp::instance('\admin\model\order');
+        $order = Core::instance('\admin\model\order');
         $orderid = $this->getRequest('id');
         $status = $this->getRequest('status');
         $order->updateOrder($orderid,$status);
